@@ -55,12 +55,19 @@ function Attention() {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const [showPicPlayer, setShowPicPlayer] = useState(false);
   const [text,setText] = useState('');
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
   
-  const videoRef = useRef(null);
-  const startVideo = () => videoRef.current.play();
-  const stopVideo = () => videoRef.current.pause(); 
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const startVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  const stopVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  }; 
   const audioRef = useRef<HTMLAudioElement |null>(null);
   
 
@@ -77,16 +84,13 @@ function Attention() {
   const playSound = () => {
     if (!audioRef.current){
       audioRef.current = new Audio(attention_mp3);
-      setIsPlaying(false);
     }
     const audio = audioRef.current;
     if (audio.paused){
       audio.play();
-      setIsPlaying(true);
     }
     else{
       audio.pause();
-      setIsPlaying(false);
     }
   }
   //<img src={title} className="title" alt="Hype Boy" style={{ maxWidth: "500px" }} />
