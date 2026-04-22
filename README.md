@@ -3,6 +3,10 @@
 A nostalgic **Y2K / Windows XP inspired music web experience** built with React + Vite.  
 This project reimagines *NewJeans — Attention* as an interactive desktop-style interface.
 
+
+## 🌐Website
+[attention-y2k-visualizer.vercel.app](https://attention-y2k-visualizer.vercel.app)
+
 ---
 
 ## ✨ Features
@@ -44,7 +48,8 @@ Inspired by:
 - React  
 - Vite  
 - TypeScript  
-- CSS (animations + visual effects)  
+- CSS (animations + visual effects)
+- Vercel (deployment)
 
 ---
 
