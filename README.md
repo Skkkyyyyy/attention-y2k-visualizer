@@ -11,7 +11,7 @@ This project reimagines *NewJeans — Attention* as an interactive desktop-style
 
 ## ✨ Features
 
-- 💿 Draggable desktop-style UI  
+- 💿 Desktop-style UI  
 - 🎵 Custom audio player (play / pause toggle)  
 - 🖼️ Image / media viewer (like old media player)  
 - 📝 Notepad-style text window  
